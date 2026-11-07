@@ -100,11 +100,10 @@ namespace TKS_PlatformStudyToggle
             if (this.studyCache.ContainsKey(ID))
             {
                return this.studyCache[ID];
-            } else
-            {
-                TKS_PlatformStudyToggle.DebugMessage(" no cached value for " + ID+", return true");
-                return true;
             }
+
+            //no entry just means the player hasn't toggled this platform, and study is on by default
+            return true;
         }
 
     }
